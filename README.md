@@ -9,6 +9,8 @@
 
 ## About Laravel
 
+Cambios realizados por el Ing. Saul Vazquez Velazquez
+
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
@@ -46,6 +48,7 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - **[OP.GG](https://op.gg)**
 - **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
 - **[Lendio](https://lendio.com)**
+
 
 ## Contributing
 
