@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <p>Home Admin.</p>
+    <p>Home Administrador.</p>
 @stop
 
 @section('css')
