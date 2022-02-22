@@ -253,11 +253,11 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'Data-Settings'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text' => 'Personas',
+            'route'  => 'admin.persona.index',
+            'icon' => 'fas fa-fw fa-users',
         ],
         [
             'text' => 'change_password',
