@@ -19,9 +19,9 @@ class CreatePersonasTable extends Migration
             $table->string('lastname');
             $table->string('email');
             $table->date('dateofbirth');
-            $table->char('sex');
+            $table->string('sex');
             $table->string('phone');
-            $table->string('avatar');
+            $table->char('avatar');
             $table->string('password');
             $table->timestamps();
         });

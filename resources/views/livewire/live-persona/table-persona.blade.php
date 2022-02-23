@@ -14,7 +14,8 @@
                                 <th>Phone</th>
                                 <th>Avatar</th>
                                 <th>Password</th>
-                                <th class="col-6">Actions</th>
+                                <th class="col-2">Actions</th>
+                                
                             </tr>
                         </thead>
                         <tbody>
@@ -31,15 +32,11 @@
                                     <td>{{$persona->avatar}}</td>
                                     <td>{{$persona->password}}</td>
                                     <td>
-                                        <a href="{{route("admin.persona.edit",$persona)}}" class="btn btn-sm btn-primary">Edit</a>
-                                        {{-- {!! Form::model($persona, ['route'=>['admin.persona.destroy',$persona],'method'=>'DELETE']) !!}
-                                        {{-- <button type="submit" class="btn btn-sm btn-primary">Edit</button> --}}
-                                        {{-- {!! Form::open(["route"=>["admin.persona.destroy",$persona], "method" => "DELETE"]) !!}     --}}
-                                        {{-- {!! Form::open(['route'=>['admin.persona.destroy',$persona],'method' => 'DELETE']) !!} --}}
-
+                                        
+                                        {!! Form::model($persona, ['route'=>['admin.persona.destroy',$persona],'method'=>'DELETE']) !!}
                                         {!! Form::submit('Delete', ["class"=>"btn btn-sm btn-danger"]) !!}
-                                        {!! Form::close() !!} --}}
-                                
+                                        {!! Form::close() !!} 
+                                        <a href="{{route("admin.persona.edit",$persona)}}" class="btn btn-m btn-primary">Edit</a>
                                     </td>    
                                 </tr>
                                 

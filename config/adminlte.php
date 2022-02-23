@@ -257,7 +257,7 @@ return [
         [
             'text' => 'Personas',
             'route'  => 'admin.persona.index',
-            'icon' => 'fas fa-fw fa-users',
+            'icon' => 'fas fa-user-astronaut',
         ],
         [
             'text' => 'change_password',

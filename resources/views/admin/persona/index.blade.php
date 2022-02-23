@@ -10,8 +10,9 @@
     <div class="card">
         <div class="card-body">
             <div class="card-header">
+                <a href="{{route("admin.persona.create")}}" class="btn btn-secondary btn-sm float-right">Crete new Persona</a>
                 <h5><strong>Data of Persona</strong></h5>
-                <a href="{{route("admin.persona.create")}}" class="btn btn-secondary btn-sm mb-1">Crete new Persona</a>
+                
             </div>
             @if (session('personainsert'))
                 <div class="alert alert-success">
@@ -20,14 +21,19 @@
             @endif
 
             @if (session('personadelete'))
-                <div class="alert alert-danger">
+                <div class="alert alert-success">
                     <strong>{{session('personadelete')}}</strong>
                 </div>
             @endif
 
+            
+            
+
             {{-- personainsert --}}
             <div class="card-body">
+                
                 @livewire('live-persona.table-persona')
+                
                 
             </div>
         </div>

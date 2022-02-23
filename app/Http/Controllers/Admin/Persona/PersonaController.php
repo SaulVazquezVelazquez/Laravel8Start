@@ -19,12 +19,7 @@ class PersonaController extends Controller
      */
     public function index()
     {
-        // $personas = DB::select('SELECT * FROM personas');
-        // $personas = Persona::all();
-
-        // return view('admin.persona.index',compact('personas'));
         return view('admin.persona.index');
-        
         
     }
 
@@ -48,7 +43,7 @@ class PersonaController extends Controller
     {    
         $persona = Persona::create($request->all());
 
-        return redirect()->route('admin.persona.index',compact('persona'))->with('personainsert', 'Persona Save Success');
+        return redirect()->route('admin.persona.index',$persona)->with('personainsert', 'Persona Save Success');
     }
 
     public function show($id)
@@ -56,21 +51,25 @@ class PersonaController extends Controller
         //
     }
 
-    public function edit($id)
+    public function edit(Persona $persona)
     {
-        //
+        return view('admin.persona.edit',compact('persona'));
     }
 
 
-    public function update(Request $request, $id)
+    public function update(Request $request, Persona $persona)
     {
-        //
+        // $persona = Persona::updated($request->all());
+        $persona->update($request->all());
+
+        return redirect()->route("admin.persona.edit",$persona)->with("personaupdate","Persona Updating success");
+        //personaupdate
     }
 
     public function destroy(Persona $persona)
     {
-        
         $persona->delete();
         return redirect()->route("admin.persona.index")->with('personadelete', 'Delete Persona Success');
+        // return redirect()->route("admin.persona.index");
     }
 }
